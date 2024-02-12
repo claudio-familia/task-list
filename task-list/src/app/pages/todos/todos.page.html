@@ -1,0 +1,23 @@
+<div class="todos__container">
+    <div class="todos__container--header">
+        <h3 class="mat-headline-3">Tasklist</h3>
+        <div>
+            <mat-chip-option [selected]="pendings" (click)="pendings = !pendings; getTodos()">Show Pedings</mat-chip-option>
+            <mat-chip-option [selected]="completes" (click)="completes = !completes; getTodos()">Show completes</mat-chip-option>
+        </div>
+    </div>
+    <div class="todos__container--content">
+        <hl-todo-item-list 
+            *ngFor="let todo of filteredTodos; trackBy: trackList"
+            [todo]="todo"
+            (complete)="completeHandler($event)"
+            (delete)="deleteHandler($event)"
+        >
+        </hl-todo-item-list>
+    </div>
+    <div class="todos__container--add-button">
+        <button mat-fab color="primary" aria-label="Add todo" (click)="createTodo()">
+            <mat-icon inline="true">add-task</mat-icon>
+        </button>
+    </div>
+</div>

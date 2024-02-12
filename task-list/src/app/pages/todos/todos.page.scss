@@ -1,0 +1,27 @@
+.todos__container {
+    padding: 5rem 15rem;
+
+    .todos__container--header {
+        display: flex;
+        justify-content: space-between;
+        h3 {
+            margin-bottom: 1rem;
+        }
+        mat-chip-option {
+            margin-right: 0.25rem;
+        }
+    }
+
+    .todos__container--add-button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 0 15rem 5rem 0;
+
+        button {
+            width: 7rem;
+            height: 7rem;
+            font-size: 7rem;
+        }
+    }
+}

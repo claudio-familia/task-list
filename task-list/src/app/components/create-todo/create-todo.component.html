@@ -1,0 +1,33 @@
+<hl-dialog title="Create new item to task-list">
+    <form [formGroup]="todoForm">
+        <div class="form__element">
+            <label>Title</label>
+            <mat-form-field>
+                <mat-label>Title</mat-label>
+                <input 
+                    matInput 
+                    placeholder="Type the title" 
+                    formControlName="title" />
+                <mat-icon matPrefix>title</mat-icon>
+                <mat-error *ngIf="todoForm.get('title')?.hasError('required')">
+                    Title is required
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="form__element">
+            <label>Description</label>
+            <mat-form-field>
+                <mat-label>Description</mat-label>
+                <textarea 
+                    matInput 
+                    placeholder="Type the Description" 
+                    formControlName="description"></textarea>
+                <mat-icon matPrefix>description</mat-icon>
+            </mat-form-field>
+        </div>
+        <div class="form__element--buttons">
+            <button mat-raised-button color="primary" [disabled]="todoForm.invalid" (click)="createItem()">Create item</button>
+            <button  mat-raised-button (click)="cancel()">Cancelar</button>
+        </div>
+    </form>
+</hl-dialog>

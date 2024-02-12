@@ -1,0 +1,16 @@
+<ng-container *ngIf="todo">
+    <div class="todo__item--container" [ngClass]="{'completed': todo.isCompleted}">
+        <div class="todo__item--element">
+            <mat-checkbox color="primary" [checked]="todo.isCompleted" (change)="completeHandler($event)"></mat-checkbox>
+            <div>
+                {{todo.title}}
+            </div>
+        </div>
+        <div>
+            <button mat-icon-button (click)="delete.emit(todo)">
+                <mat-icon color="primary">delete</mat-icon>
+            </button>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+</ng-container>

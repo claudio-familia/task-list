@@ -1,0 +1,18 @@
+.alert__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    h2 {
+        margin-bottom: 0.5rem;
+    }
+    div {
+        height: 7rem;
+        mat-icon {
+            font-size: 7rem;
+            height: 7rem;
+            width: 7rem;
+        }
+    }
+}
