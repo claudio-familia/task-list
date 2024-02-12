@@ -1,0 +1,9 @@
+TaskListAPI/.vs
+TaskListAPI/TaskList.Core/bin
+TaskListAPI/TaskList.Core/obj
+
+TaskListAPI/TaskList.DataAccess/bin
+TaskListAPI/TaskList.DataAccess/obj
+
+TaskListAPI/TaskListAPI/bin
+TaskListAPI/TaskListAPI/obj
